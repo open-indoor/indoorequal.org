@@ -394,11 +394,11 @@
         "subtitle": "Découvrer le schéma des tuiles vectorielles pour les intégrer dans votre application",
         "title": "Lire le schéma"
       },
-      "subtitle": "Intégrer indoor= à votre carte",
+      "subtitle": "Intégrer openindoor à votre carte",
       "title": "Développeurs"
     },
     "collapse": "Replier",
-    "description": "indoor= est une carte qui affiche les données intérieure d'{0}.",
+    "description": "openindoor est une carte qui affiche les données intérieure d'{0}.",
     "explore": {
       "subtitle": "Lieux cartographié en intérieur",
       "title": "Explorer"

@@ -19,7 +19,7 @@
           <h1 class="display-1">
             <img
               :src="logo"
-              alt="indoor="
+              alt="openindoor"
               class="logo"
             />
           </h1>
@@ -104,7 +104,7 @@ import { tilesUrl } from '../config.json';
 import AboutInfo from './about_info';
 import ApiInfo from './api_info';
 import ExploreList from './explore_list';
-import logo from '../icons/indoorequal.svg';
+import logo from '../icons/openindoor.png';
 
 const COMPONENTS = {
   explore: ExploreList,

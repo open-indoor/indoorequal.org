@@ -19,7 +19,7 @@ import { $helpers } from 'vue-mapbox/dist/vue-mapbox.umd.js';
 export default {
   mixins: [$helpers.asControl],
 
-  inject: ['indoorequal'],
+  inject: ['openindoor'],
 
   data() {
     return {
@@ -58,7 +58,7 @@ export default {
 
   watch: {
     heatmap(visible) {
-      this.indoorequal.setHeatmapVisible(this.heatmap);
+      this.openindoor.setHeatmapVisible(this.heatmap);
     }
   },
 };

@@ -9,7 +9,7 @@
         >
           <img
             :src="equalLogo"
-            alt="indoor="
+            alt="openindoor"
             width="36"
           />
         </v-btn>

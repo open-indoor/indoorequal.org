@@ -8,14 +8,14 @@
       <v-card
         color="primary"
         dark
-        href="https://indoorequal.com/"
+        href="https://openindoor.io/"
         target="_blank"
         rel="noopener"
       >
-        <v-card-title>{{ $t('sidebar.api.indoorequal.title') }}</v-card-title>
-        <v-card-subtitle>{{ $t('sidebar.api.indoorequal.subtitle') }}</v-card-subtitle>
+        <v-card-title>{{ $t('sidebar.api.openindoor.title') }}</v-card-title>
+        <v-card-subtitle>{{ $t('sidebar.api.openindoor.subtitle') }}</v-card-subtitle>
         <v-card-actions>
-          <v-btn text>{{ $t('sidebar.api.indoorequal.cta') }}</v-btn>
+          <v-btn text>{{ $t('sidebar.api.openindoor.cta') }}</v-btn>
         </v-card-actions>
       </v-card>
       <v-card
@@ -36,7 +36,7 @@
         color="blue darken-3"
         dark
         class="mt-4"
-        href="https://indoorequal.com/schema"
+        href="https://openindoor.com/schema"
         target="_blank"
         rel="noopener"
       >

@@ -17,7 +17,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-list-item
-        href="https://twitter.com/francois2metz"
+        href="https://www.linkedin.com/in/clement-igonet"
         target="_blank"
         rel="noopener"
       >
@@ -29,7 +29,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-list-item
-        href="https://github.com/indoorequal"
+        href="https://github.com/open-indoor"
         target="_blank"
         rel="noopener"
       >

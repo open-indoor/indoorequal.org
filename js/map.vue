@@ -29,12 +29,8 @@
 <script>
 import { MglMap, MglNavigationControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 const fs = require('fs');
-// import IndoorEqual from 'mapbox-gl-indoorequal';
 import OpenIndoor from 'mapbox-gl-openindoor';
 import {
-  mapTilerApiKey,
-  indoorEqualApiKey,
-  tilesUrl,
   mapStyle,
   sourceId,
   layerId,
@@ -84,8 +80,8 @@ export default {
   provide() {
     const self = this;
     return {
-      get indoorequal() {
-        return self.indoorEqualInstance;
+      get openindoor() {
+        return self.openIndoorInstance;
       }
     };
   },
@@ -107,7 +103,7 @@ export default {
     load({ map }) {
       this.map = map;
       // Source: https://app.openindoor.io/style/indoor/indoorLayers.json
-      this.indoorEqualInstance = new OpenIndoor(this.map,
+      this.openIndoorInstance = new OpenIndoor(this.map,
         {
           sourceId: sourceId,
           layerId: layerId,

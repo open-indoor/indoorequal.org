@@ -20,7 +20,7 @@ import { $helpers } from 'vue-mapbox/dist/vue-mapbox.umd.js';
 export default {
   mixins: [$helpers.asControl],
 
-  inject: ['indoorequal'],
+  inject: ['openindoor'],
 
   props: {
     value: {
@@ -38,10 +38,10 @@ export default {
   mounted() {
     this.control = this;
     this.$_addControl();
-    this.levels = this.indoorequal.levels;
-    this.indoorequal.setLevel(this.value);
-    this.indoorequal.on('levelchange', (level) => this.$emit('input', level));
-    this.indoorequal.on('levelschange', (levels) => this.levels = levels);
+    this.levels = this.openindoor.levels;
+    this.openindoor.setLevel(this.value);
+    this.openindoor.on('levelchange', (level) => this.$emit('input', level));
+    this.openindoor.on('levelschange', (levels) => this.levels = levels);
   },
 
   methods: {
@@ -54,7 +54,7 @@ export default {
     },
 
     setLevel(level) {
-      this.indoorequal.setLevel(level);
+      this.openindoor.setLevel(level);
     }
   }
 };

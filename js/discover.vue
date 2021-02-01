@@ -4,7 +4,7 @@
     color="primary"
   >
     <v-card-title>
-      indoor=
+      openindoor
       <v-spacer></v-spacer>
       <v-btn
         icon

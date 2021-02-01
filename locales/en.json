@@ -398,11 +398,11 @@
         "subtitle": "Discover the vector tile schema to integrate the tiles in any app.",
         "title": "Read the schema"
       },
-      "subtitle": "Integrate indoor= into your map",
+      "subtitle": "Integrate openindoor into your map",
       "title": "Developers"
     },
     "collapse": "Collapse",
-    "description": "indoor= is a map that display indoor data from {0}.",
+    "description": "openindoor is a map that display indoor data from {0}.",
     "explore": {
       "subtitle": "Showcase indoor location",
       "title": "Explore"

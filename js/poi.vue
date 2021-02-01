@@ -82,7 +82,6 @@
 </template>
 
 <script>
-import { tilesUrl, indoorEqualApiKey } from '../config.json';
 import { contactsFor } from './place';
 import OpeningHours from './opening_hours';
 
@@ -130,9 +129,9 @@ export default {
       if (this.sprite) {
         const klass = this.geojson.properties.class;
         const subclass = this.geojson.properties.subclass;
-        const icon = [subclass, klass].find(value => this.sprite[`indoorequal-${value}`]);
+        const icon = [subclass, klass].find(value => this.sprite[`openindoor-${value}`]);
         if (icon) {
-          return this.sprite[`indoorequal-${icon}`].data;
+          return this.sprite[`openindoor-${icon}`].data;
         }
       }
     },
@@ -180,7 +179,7 @@ export default {
           return;
         }
         this.loading = true;
-        fetch(`${tilesUrl}poi/${this.value}?key=${indoorEqualApiKey}`)
+        fetch(`poi/${this.value}`)
           .then(res => res.json())
           .then((geojson) => {
             this.geojson = geojson;
