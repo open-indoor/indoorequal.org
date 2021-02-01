@@ -1,0 +1,3 @@
+[submodule "mapbox-gl-openindoor"]
+	path = mapbox-gl-openindoor
+	url = https://github.com/open-indoor/mapbox-gl-openindoor

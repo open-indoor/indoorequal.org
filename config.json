@@ -1,5 +1,9 @@
 {
   "mapTilerApiKey": "T7HQrA4a6k5eOxDGD6qp",
   "indoorEqualApiKey": "3mvaOOkLgx6LA4iP1P1Jbb",
-  "tilesUrl": "https://tiles.indoorequal.org/"
+  "tilesUrl": "https://tiles.indoorequal.org/",
+  "mapStyle": "https://app.openindoor.io/style/openindoorStyle_france.json",
+  "sourceId": "indoor",
+  "layerId": "osm-indoor",
+  "layersSrc": "https://app.openindoor.io/style/indoor/indoorLayers.json"
 }

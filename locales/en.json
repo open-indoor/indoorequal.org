@@ -390,8 +390,8 @@
       },
       "mapboxgl": {
         "cta": "Install",
-        "subtitle": "The easiest way to integrate indoor= in you map.",
-        "title": "mapbox-gl-indoorequal"
+        "subtitle": "The easiest way to integrate openindoor in you map.",
+        "title": "mapbox-gl-openindoor"
       },
       "schema": {
         "cta": "Read",

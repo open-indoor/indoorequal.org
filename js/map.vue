@@ -28,8 +28,18 @@
 
 <script>
 import { MglMap, MglNavigationControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
-import IndoorEqual from 'mapbox-gl-indoorequal';
-import { mapTilerApiKey, indoorEqualApiKey, tilesUrl } from '../config.json';
+const fs = require('fs');
+// import IndoorEqual from 'mapbox-gl-indoorequal';
+import OpenIndoor from 'mapbox-gl-openindoor';
+import {
+  mapTilerApiKey,
+  indoorEqualApiKey,
+  tilesUrl,
+  mapStyle,
+  sourceId,
+  layerId,
+  layersSrc
+} from '../config.json';
 import LevelControl from './level_control';
 import HeatmapControl from './heatmap_control';
 
@@ -82,7 +92,9 @@ export default {
 
   data() {
     return {
-      mapStyle: `https://api.maptiler.com/maps/bright/style.json?key=${mapTilerApiKey}`
+      // mapStyle: `https://api.maptiler.com/maps/bright/style.json?key=${mapTilerApiKey}`
+      // mapStyle: `https://api.openindoor.io/tileserver/data/france.json`
+      mapStyle: mapStyle
     };
   },
 
@@ -91,18 +103,17 @@ export default {
       this.map.fitBounds(bbox, { duration: 0 });
     }
   },
-
   methods: {
     load({ map }) {
       this.map = map;
-      this.indoorEqualInstance = new IndoorEqual(this.map, { apiKey: indoorEqualApiKey, url: tilesUrl });
-      this.indoorEqualInstance.loadSprite('/indoorequal')
-        .then((sprite) => {
-          this.$emit('sprite', sprite);
-        });
-      setTimeout(() => {
-        this.updateMapZoom(map.getZoom());
-      }, 100);
+      // Source: https://app.openindoor.io/style/indoor/indoorLayers.json
+      this.indoorEqualInstance = new OpenIndoor(this.map,
+        {
+          sourceId: sourceId,
+          layerId: layerId,
+          layersSrc: layersSrc
+        }
+      );
     },
 
     updateMapCenter(mapCenter) {

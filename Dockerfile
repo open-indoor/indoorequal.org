@@ -2,12 +2,14 @@ FROM node:14 as builder
 
 WORKDIR /code
 
-COPY package.json yarn.lock /code/
-RUN yarn install --pure-lockfile
+# COPY package.json yarn.lock /code/
+COPY package.json /code/
+RUN yarn install --frozen-lockfile
 
 COPY . /code
 RUN yarn run build
 
+# ------------------
 FROM nginx:alpine
 
 COPY nginx_gzip.conf /etc/nginx/conf.d

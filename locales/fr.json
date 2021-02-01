@@ -386,8 +386,8 @@
       },
       "mapboxgl": {
         "cta": "Installer",
-        "subtitle": "La façon la plus simple d'intégrer indoor= dans votre carte",
-        "title": "mapbox-gl-indoorequal"
+        "subtitle": "La façon la plus simple d'intégrer openindoor dans votre carte",
+        "title": "mapbox-gl-openindoor"
       },
       "schema": {
         "cta": "Lire",
